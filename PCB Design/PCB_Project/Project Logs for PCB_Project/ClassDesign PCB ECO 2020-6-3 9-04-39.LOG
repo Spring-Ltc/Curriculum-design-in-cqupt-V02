@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=NetC9_2 Pin=Y2-1
+Removed Pin From Net: NetName=NetC12_2 Pin=Y2-2
+Added Component: Designator=Y2(XTAL-D2X6)
+Added Pin To Net: NetName=NetC12_2 Pin=Y2-1
+Added Pin To Net: NetName=NetC9_2 Pin=Y2-2

@@ -1,0 +1,16 @@
+Added Pin To Net: NetName=GND Pin=USB1-H1
+Added Pin To Net: NetName=GND Pin=USB1-H2
+Added Pin To Net: NetName=GND Pin=USB1-H3
+Added Pin To Net: NetName=GND Pin=USB1-H4
+Added Member To Class: ClassName=ClassDesign Member=Component C1 104
+Added Member To Class: ClassName=ClassDesign Member=Component C2 104
+Added Member To Class: ClassName=ClassDesign Member=Component C7 104
+Added Member To Class: ClassName=ClassDesign Member=Component C8 104
+Added Member To Class: ClassName=ClassDesign Member=Component C9 12p
+Added Member To Class: ClassName=ClassDesign Member=Component R3 10k
+Added Member To Class: ClassName=ClassDesign Member=Component R4 10k
+Added Member To Class: ClassName=ClassDesign Member=Component R5 10k
+Added Member To Class: ClassName=ClassDesign Member=Component R10 0¦¸
+Added Member To Class: ClassName=ClassDesign Member=Component R11 0¦¸
+Added Member To Class: ClassName=ClassDesign Member=Component R14 240
+Added Member To Class: ClassName=ClassDesign Member=Component Y2 32.768kHz

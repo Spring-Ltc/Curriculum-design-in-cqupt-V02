@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=OLED NewDesignator=J2
+Change Component Designator: OldDesignator=RFID NewDesignator=J3
+Change Component Designator: OldDesignator=SWD NewDesignator=J7
+Added Pin To Net: NetName=MAX7219_CS Pin=U4-21
+Added Member To Class: ClassName=ClassDesign Member=Component J7 SWDµ÷ÊÔµçÂ·
