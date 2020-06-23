@@ -159,7 +159,7 @@ int main(void)
 		ClearArray(StuNumber,10);
 		ChineseName=32;
 
-		delay_ms(2);//加个延时，不然一直连续读卡会让读卡不成功
+		delay_ms(200);//加个延时，不然一直连续读卡会让读卡不成功
 		status = RFID_Search(IDcard);//一直检测是否有卡
 	
 		if(status != 0)
@@ -180,7 +180,7 @@ int main(void)
 		//RFID卡号匹配成功，发送人脸识别请求并启动测温
 		Digitaltube_Wait();//数码管显示横杠，表示正在等待人脸识别的结果
 		FaceRecognitionResult = 1;
-		FaceRecognitionResult = SendFaceRecognitionRequest(USART1,3);//返回0表示收到人脸识别结果,3次重新请求
+		FaceRecognitionResult = SendFaceRecognitionRequest(USART1,2);//返回0表示收到人脸识别结果,3次重新请求
 		if(FaceRecognitionResult)
 			BUZZ_Flashing(3);//蜂鸣器叫三次表示人脸识别失败
 //【不管人脸识别成功还是失败，都进行测温和开门操作；如果不执行，这里加个continue】
@@ -204,9 +204,9 @@ int main(void)
 		if(FaceRecognitionResult == 0)//人脸识别成功，上传体温信息，并且本地做出显示提示
 		{
 			BUZZ=0;delay_ms(300);BUZZ=1;//人脸识别成功提示音
-			UpdataTemperature(USART1,Temperature,3);//【这里上传体温信息】
+			UpdataTemperature(USART1,Temperature,2);//【这里上传体温信息】
 			OLED_DisplayUpdata(ChineseName,IDcard,StuNumber);
-			delay_ms(1000);delay_ms(1000);delay_ms(1000);
+			//delay_ms(1000);delay_ms(1000);delay_ms(1000);
 		}
 		
 
@@ -215,13 +215,13 @@ int main(void)
 			BUZZ_Flashing(10);//蜂鸣器叫5次做出高温提示
 		else
 		{
-			Motor_open();//开门
+			//Motor_open();//开门
 			LED_Flashing(green,5);//绿灯闪烁,提醒尽快通行
 			LedTurnON(green);//绿灯期间通行
-			delay_ms(1000);delay_ms(1000);delay_ms(1000);//给你3s时间赶快通过
+			//delay_ms(1000);delay_ms(1000);delay_ms(1000);//给你3s时间赶快通过
 			LedTurnOFF(green);
 			LED_Flashing(red,5);//红灯闪烁,提醒门即将关闭
-			Motor_close();//关门
+			//Motor_close();//关门
 		}
   }
 }
